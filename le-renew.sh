@@ -2,7 +2,7 @@
 
 # Author	:  Ken Cascio
 # Description	:  Script to process:  letsencrypt renew
-# Description	:  Original Pythong Script did not provide propr PATH, Logging,
+# Description	:  Original Python Script did not provide propr PATH, Logging,
 # Description	:  or Email Notification.
 # Date  	:  06/05/17
 # Version	:  01
