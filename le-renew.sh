@@ -1,17 +1,16 @@
 #!/bin/bash
 
-# Author	:  Ken Cascio
+# Author	    :  Ken Cascio
 # Description	:  Script to process:  letsencrypt renew
 # Description	:  Original Python Script did not provide propr PATH, Logging,
 # Description	:  or Email Notification.
-# Date  	:  06/05/17
-# Version	:  01.1
+# Date  	    :  06/05/17
+# Version	    :  01.1
 
 # letsencrypt renew is a python script that requires root enviornment PATH to function.
 # this restores the root PATH so the call works properly and includes proper logging/email.
 
 export PATH="$PATH"
-
 
 # letencryupt renewal execution
 
