@@ -5,23 +5,31 @@
 # Description	:  Original Python Script did not provide propr PATH, Logging,
 # Description	:  or Email Notification.
 # Date  	:  06/05/17
-# Version	:  01
+# Version	:  01.1
 
 # letsencrypt renew is a python script that requires root enviornment PATH to function.
 # this restores the root PATH so the call works properly and includes proper logging/email.
 
 export PATH="$PATH"
 
+
+# letencryupt renewal execution
+
+output=$(/usr/bin/letsencrypt renew)
+
 # Variables
 
 log=/var/log/le-renew.log
-output=$(/usr/bin/letsencrypt renew)
+
 success=$(printf "$output" | grep 'success')
 failure=$(printf "$output" | grep 'failure')
 skipped=$(printf "$output" | grep 'skipped')
+
 results="$success$failure$skipped"
+
 mailsubject=""
 logged='F'
+
 now=$(date)
 
 # Restart Services
